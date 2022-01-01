@@ -2,10 +2,12 @@ import 'package:chat_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(ChatNow());
+  runApp(const ChatNow());
 }
 
 class ChatNow extends StatelessWidget {
+  const ChatNow({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +16,9 @@ class ChatNow extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.red, 
-        colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Color(0xFFFEF9EB)),
+        colorScheme: ColorScheme.fromSwatch().copyWith(secondary: const Color(0xFFFEF9EB)),
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
